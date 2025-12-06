@@ -111,6 +111,16 @@ This helps drivers:
 ---
 
 """)
+st.subheader("🗺️ NYC Region Map (30 MiniBatchKMeans Clusters)")
+
+st.markdown("""
+Below is the **NYC pickup region map** generated using **MiniBatchKMeans (K=30)**.  
+Each color represents a different demand cluster, and the red ❌ marks the cluster centroid.
+
+This map shows how NYC is divided into meaningful geographic regions before forecasting.
+""")
+
+st.image("img.png", caption="NYC Pickup Regions (30 Clusters)", use_container_width=False)
 
 
 # ------------------------------------------------------------
