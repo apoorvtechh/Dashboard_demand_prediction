@@ -83,20 +83,35 @@ def predict_row(row, region_id):
 st.title("🚕 Uber Demand Prediction Dashboard")
 
 st.markdown("""
-Welcome to the **NYC Uber Demand Forecaster**, powered by:
+Welcome to the **NYC Uber Demand Forecaster** — an intelligent system that predicts  
+**how many ride requests will occur in the next 15 minutes across all NYC regions.**
 
-- 🧠 **MiniBatch KMeans** → divides NYC into demand regions  
-- 🔮 **Prophet** → learns hourly trends  
-- ⚡ **XGBoost** → forecasts 15-minute demand  
+This app is powered by a hybrid forecasting engine:
 
-You will:
-1. Pick any date & time  
-2. A random NYC coordinate will be generated  
-3. We detect its region  
-4. We predict demand for **all 30 regions**  
-5. Show results beautifully + on NYC heatmap  
+- 🧠 **MiniBatch KMeans** → divides NYC into **30 demand regions**  
+- 🔮 **Prophet** → learns long-term daily & weekly demand patterns  
+- ⚡ **XGBoost** → predicts short-term spikes & real-time fluctuations  
+
+### 🧭 What this app does:
+1. You pick any **date & time**  
+2. A random **NYC pickup location** is generated  
+3. The system detects **which region** that coordinate belongs to  
+4. We forecast **future demand for all 30 regions**  
+5. Results are visualized clearly — including a dynamic **NYC heatmap**  
+
+### 🎯 What are we predicting?
+We predict:  
+**“How many Uber pickups will likely happen in the next 15 minutes in each region of NYC.”**
+
+This helps drivers:
+- Find **high-demand zones**
+- Reduce idle time  
+- Increase earnings with smarter positioning  
+
 ---
+
 """)
+
 
 # ------------------------------------------------------------
 # STEP 1 — DATE & TIME PICKING
