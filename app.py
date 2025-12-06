@@ -361,7 +361,7 @@ if st.button("🔮 Predict Demand for Next 15 Minutes"):
 
     st.pydeck_chart(deck)
 
-    # 4️⃣ SIMPLE LEGEND AS INFO BOX
+   
     st.info(
         "🎨 **Color Coding**\n"
         "- 🔴 **High Demand** (bright red points)\n"
